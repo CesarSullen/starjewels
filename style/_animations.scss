@@ -1,0 +1,28 @@
+.show-up-blur {
+	animation: showUpBlurAnimation 1.5s forwards;
+}
+@keyframes showUpBlurAnimation {
+	0% {
+		filter: blur(15px);
+		transform: translateY(300vh);
+	}
+	80% {
+		transform: translateY(0px);
+	}
+	to {
+		filter: blur(0px);
+		transform: translateY(0px);
+	}
+}
+
+.blur-in {
+	animation: blurIn 1.5s forwards;
+}
+@keyframes blurIn {
+	0% {
+		filter: blur(0px);
+	}
+	to {
+		filter: blur(8px);
+	}
+}
