@@ -34,12 +34,16 @@ links.forEach((link) =>
 
 // Accordion
 document.addEventListener("DOMContentLoaded", () => {
-	const header = document.querySelector(".vip-header");
-	const content = document.querySelector(".vip-content");
-	const toggle = document.querySelector(".vip-toggle");
+	const accordions = document.querySelectorAll(".accordion-card");
 
-	header.addEventListener("click", () => {
-		content.classList.toggle("active");
-		toggle.classList.toggle("active");
+	accordions.forEach((accordion) => {
+		const header = accordion.querySelector(".accordion-header");
+		const content = accordion.querySelector(".accordion-content");
+		const toggle = accordion.querySelector(".accordion-toggle");
+
+		header.addEventListener("click", () => {
+			content.classList.toggle("active");
+			toggle.classList.toggle("active");
+		});
 	});
 });
