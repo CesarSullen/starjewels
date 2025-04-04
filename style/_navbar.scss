@@ -31,7 +31,7 @@
 	}
 }
 .nav-title {
-	color: $dark-color;
+	color: $primary-color;
 	font-size: 2rem;
 }
 .nav-links {
@@ -45,7 +45,7 @@
 		align-items: center;
 
 		p {
-			color: $dark-color;
+			color: $primary-color;
 			position: relative;
 
 			&:hover {
@@ -107,7 +107,7 @@
 	display: flex;
 	gap: 10px;
 	align-items: center;
-	color: $dark-color;
+	color: $primary-color;
 	font-size: 1.5rem;
 	&:hover {
 		color: $primary-color;

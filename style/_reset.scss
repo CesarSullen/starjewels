@@ -11,7 +11,7 @@
 }
 
 // Variables
-$primary-color: #0909cb;
+$primary-color: #101f4d;
 $secondary-color: #d4b49f;
 $background-color: #e0ded3;
 $dark-color: #2f2d2a;
@@ -75,8 +75,8 @@ a {
 .btn {
 	padding: 0.5rem 1.6rem;
 	border-radius: $border-radius-general;
-	border: solid 2px $dark-color;
-	background: $dark-color;
+	border: solid 2px $primary-color;
+	background: $primary-color;
 	font-size: 1rem;
 	cursor: pointer;
 	width: 100%;
@@ -122,11 +122,11 @@ a {
 	background: transparent;
 	backdrop-filter: blur(10px);
 	border: solid 2px $dark-color;
-	color: $dark-color;
+	color: $primary-color;
 	transition: all 0.3s ease;
 
 	&:hover {
-		background: $dark-color;
+		background: $primary-color;
 		color: $secondary-color;
 		transform: translateY(-2px);
 	}

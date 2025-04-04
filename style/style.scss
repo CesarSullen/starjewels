@@ -18,6 +18,8 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 15px;
+	width: 100%;
+
 	@media screen and (min-width: 768px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -47,7 +49,7 @@
 }
 .header-title {
 	position: absolute;
-	color: $dark-color;
+	color: $primary-color;
 	font-size: 25vw;
 	text-align: center;
 	line-height: 0.8;
@@ -284,6 +286,7 @@
 }
 
 .accordion-section {
+	@include flex-center();
 	width: 100%;
 }
 
@@ -342,7 +345,7 @@
 	margin: 1rem 0;
 }
 
-//  VIP
+//  Loyalty
 .vip-details-title {
 	color: $primary-color;
 	margin-bottom: 10px;
