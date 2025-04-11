@@ -1,6 +1,5 @@
 // Nav Bar Toggle
 let toggleBtn = document.getElementById("toggle-btn");
-let headerTitle = document.querySelector(".nav-title");
 let body = document.getElementById("body");
 let links = document.querySelectorAll(".side-bar-link");
 let sideBar = document.getElementById("side-bar");
@@ -14,11 +13,9 @@ function toggleMenu() {
 		sideBar.style.transform === "translateX(-200%)" ||
 		sideBar.style.transform === ""
 	) {
-		headerTitle.style.color = "$dark-color";
 		sideBar.style.transform = "translateX(0px)";
 		body.style.overflowY = "hidden";
 	} else {
-		headerTitle.style.color = "#19150f"; // $primary-color en lugar de #665b55
 		sideBar.style.transform = "translateX(-200%)";
 		body.style.overflowY = "auto";
 	}
