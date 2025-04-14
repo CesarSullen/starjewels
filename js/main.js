@@ -29,18 +29,23 @@ links.forEach((link) =>
 	})
 );
 
-// Accordion
-document.addEventListener("DOMContentLoaded", () => {
-	const accordions = document.querySelectorAll(".accordion-card");
+// Interception Observer
+const sections = document.querySelectorAll(".fade-in");
 
-	accordions.forEach((accordion) => {
-		const header = accordion.querySelector(".accordion-header");
-		const content = accordion.querySelector(".accordion-content");
-		const toggle = accordion.querySelector(".accordion-toggle");
-
-		header.addEventListener("click", () => {
-			content.classList.toggle("active");
-			toggle.classList.toggle("active");
+const observer = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry) => {
+			entry.target.classList.toggle("show", entry.isIntersecting);
+			if (entry.isIntersecting) {
+				observer.unobserve(entry.target);
+			}
 		});
-	});
+	},
+	{
+		threshold: 0.1,
+	}
+);
+
+sections.forEach((section) => {
+	observer.observe(section);
 });

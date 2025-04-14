@@ -7,16 +7,12 @@
 		"alt": "Collar con colgante de estrella",
 		"images": [
 			{
-				"src": "../assets/jewels/3.png",
+				"src": "../assets/jewels/5.png",
 				"alt": "Vista frontal del Collar Estrella"
 			},
 			{
 				"src": "../assets/jewels/4.png",
 				"alt": "Vista lateral del Collar Estrella"
-			},
-			{
-				"src": "../assets/jewels/5.png",
-				"alt": "Detalles del colgante del Collar Estrella"
 			}
 		],
 		"details": [
@@ -33,16 +29,12 @@
 		"alt": "Anillo con diseño lunar",
 		"images": [
 			{
-				"src": "../assets/jewels/5.png",
+				"src": "../assets/jewels/2.png",
 				"alt": "Vista frontal del Anillo Lunar"
 			},
 			{
 				"src": "../assets/jewels/6.png",
 				"alt": "Vista lateral del Anillo Lunar"
-			},
-			{
-				"src": "../assets/jewels/1.png",
-				"alt": "Detalles del diseño del Anillo Lunar"
 			}
 		],
 		"details": [
@@ -59,16 +51,12 @@
 		"alt": "Pendientes con motivo solar",
 		"images": [
 			{
-				"src": "../assets/jewels/4.png",
+				"src": "../assets/jewels/1.png",
 				"alt": "Vista frontal de los Pendientes Sol"
 			},
 			{
 				"src": "../assets/jewels/5.png",
 				"alt": "Vista lateral de los Pendientes Sol"
-			},
-			{
-				"src": "../assets/jewels/6.png",
-				"alt": "Detalles del diseño de los Pendientes Sol"
 			}
 		],
 		"details": [

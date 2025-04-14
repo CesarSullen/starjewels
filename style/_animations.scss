@@ -26,3 +26,14 @@
 		filter: blur(8px);
 	}
 }
+
+.fade-in {
+	transform: translateY(100px);
+	opacity: 0;
+	transition: 0.5s;
+
+	&.show {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
