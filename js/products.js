@@ -76,6 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
 				.map((detail) => `<p class="product-detail-text">${detail}</p>`)
 				.join("")}
 		  </div>
+		  <a href="../docs/how-to.pdf">
+			<button class="link">¿Cómo cuidar tus joyas?</button>
+		  </a>
 		  <button class="btn">Comprar</button>
 		</div>
 	  `;
