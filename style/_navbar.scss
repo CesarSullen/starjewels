@@ -24,15 +24,16 @@
 }
 
 .nav-icon {
-	width: 40px;
+	width: 100%;
+	max-width: 40px;
 	border-radius: 100vh;
 	@media screen and (min-width: 700px) {
-		width: 50px;
+		max-width: 50px;
 	}
 }
 .nav-title {
 	color: whitesmoke;
-	font-size: 2rem;
+	font-size: 1.3rem;
 }
 .nav-links {
 	display: none;
@@ -43,6 +44,7 @@
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		align-items: center;
+		font-size: 0.9rem;
 
 		p {
 			color: whitesmoke;

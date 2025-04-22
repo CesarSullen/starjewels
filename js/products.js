@@ -79,6 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		  <a href="../docs/how-to.pdf">
 			<button class="link">¿Cómo cuidar tus joyas?</button>
 		  </a>
+		  <a href="../docs/returns-policy.html">
+					<button class="link">Política de devoluciones</button>
+		  </a>
 		  <button class="btn">Comprar</button>
 		</div>
 	  `;
