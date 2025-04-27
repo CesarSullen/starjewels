@@ -1,0 +1,150 @@
+.custom-product-container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.custom-product-form {
+	border-radius: $border-radius-rounded;
+
+	.card-content {
+		text-align: left;
+		padding: 1rem;
+
+		&:hover {
+			transform: none;
+			box-shadow: unset;
+		}
+	}
+
+	h3 {
+		color: $primary-color;
+		font-size: 1.25rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+
+		@media (min-width: 768px) {
+			font-size: 1.5rem;
+		}
+	}
+
+	p {
+		color: $dark-color;
+		font-size: 0.9rem;
+
+		@media (min-width: 768px) {
+			font-size: 1rem;
+			line-height: 1.6;
+		}
+	}
+
+	.custom-form {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+
+		label {
+			color: $primary-color;
+			font-size: 0.9rem;
+			font-weight: 600;
+
+			@media (min-width: 768px) {
+				font-size: 1rem;
+			}
+		}
+
+		input,
+		textarea {
+			padding: 0.5rem;
+			border: $border-general;
+			border-radius: $border-radius-general;
+			font-size: 0.9rem;
+			color: $dark-color;
+			background: rgba(245, 245, 245, 0.8);
+			resize: vertical;
+			transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+			&:focus {
+				border-color: $primary-color;
+				box-shadow: 0 0 5px rgba($primary-color, 0.3);
+			}
+
+			@media (min-width: 768px) {
+				padding: 0.75rem;
+				font-size: 1rem;
+			}
+		}
+
+		.btn {
+			margin-top: 0.75rem;
+			font-size: 0.9rem;
+			padding: 0.5rem 1.5rem;
+
+			@media (min-width: 768px) {
+				margin-top: 1rem;
+				font-size: 1rem;
+				padding: 0.75rem 2rem;
+			}
+		}
+	}
+}
+
+.custom-product-gallery {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.custom-product-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+
+	@media (min-width: 768px) {
+		gap: 1.5rem;
+	}
+}
+
+.custom-product-card {
+	display: flex;
+	flex-direction: column;
+	border-radius: $border-radius-rounded;
+	box-shadow: 0 4px 15px rgba($primary-color, 0.2);
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 6px 20px rgba($primary-color, 0.3);
+	}
+}
+
+.custom-product-image {
+	width: 100%;
+	aspect-ratio: 5/3;
+	object-fit: cover;
+	object-position: center;
+}
+
+.custom-product-info {
+	padding: 0.5rem;
+	background: rgba(255, 255, 255, 0.9);
+	text-align: center;
+
+	h4 {
+		font-size: 0.9rem;
+		color: $primary-color;
+		text-transform: uppercase;
+		margin-bottom: 0.25rem;
+
+		@media (min-width: 768px) {
+			font-size: 1rem;
+		}
+	}
+
+	p {
+		font-size: 0.8rem;
+		color: $font-color;
+
+		@media (min-width: 768px) {
+			font-size: 0.9rem;
+		}
+	}
+}

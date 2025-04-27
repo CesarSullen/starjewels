@@ -3,6 +3,7 @@
 @import "navbar";
 @import "products";
 @import "docs";
+@import "request-product";
 
 // Mixins
 @mixin flex-center {
@@ -14,17 +15,6 @@
 	animation-delay: $delay;
 	filter: blur(15px);
 	transform: translateY(300vh);
-}
-
-.two-columns {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 15px;
-	width: 100%;
-
-	@media screen and (min-width: 768px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
 }
 
 // Header
