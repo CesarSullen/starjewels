@@ -597,55 +597,45 @@ section {
 }
 
 .header {
-  /* 	background: url(../assets/header.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 10/16;
-}
-@media screen and (min-width: 700px) {
-  .header {
-    aspect-ratio: 64/25;
-  }
+  background: linear-gradient(#101f4d, rgb(5.4709677419, 10.6, 26.3290322581));
+  overflow-x: hidden;
+  height: 90vh;
 }
 
 .header-content {
-  position: relative;
-  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .header-title {
-  position: absolute;
-  color: #101f4d;
+  background: url(../assets/header.png) no-repeat center;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   font-size: 25vw;
   text-align: center;
   line-height: 0.9;
-  top: 15%;
   text-transform: uppercase;
-}
-.header-title :last-child {
-  animation-delay: 0.2s;
-  filter: blur(15px);
-  transform: translateY(300vh);
 }
 @media screen and (min-width: 700px) {
   .header-title {
     font-size: 10vw;
     transform: none;
-    top: 10%;
   }
 }
 
 .header-subtitle {
-  color: #101f4d;
+  background: url(../assets/header.png) no-repeat center;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   font-size: 7vw;
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
   filter: blur(15px);
   transform: translateY(300vh);
 }
@@ -659,7 +649,6 @@ section {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  position: absolute;
   width: 100%;
   max-width: 600px;
   padding: 1rem;
@@ -671,6 +660,8 @@ section {
   transform: translateY(300vh);
 }
 .cta-section .ghost-btn {
+  border: solid 2px #d4b49f;
+  color: #d4b49f;
   animation-delay: 0.6s;
   filter: blur(15px);
   transform: translateY(300vh);
@@ -739,7 +730,7 @@ section {
 }
 @media screen and (min-width: 700px) {
   .reason {
-    max-width: 320px;
+    max-width: 350px;
   }
 }
 
@@ -892,6 +883,7 @@ section {
   object-fit: cover;
   object-position: top;
   position: relative;
+  max-width: 280px;
 }
 .jeweler-photo:first-child {
   transform: rotate(-25deg) translateX(-20%);
