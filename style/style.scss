@@ -16,21 +16,9 @@
 	transform: translateY(300vh);
 }
 
-.two-columns {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 15px;
-	width: 100%;
-
-	@media screen and (min-width: 768px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
 // Header
 .header {
 	background: linear-gradient($primary-color, darken($primary-color, 12));
-	overflow-x: hidden;
 	height: 90vh;
 }
 .header-content {
@@ -44,7 +32,7 @@
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
-	font-size: 25vw;
+	font-size: 20vw;
 	text-align: center;
 	line-height: 0.9;
 	text-transform: uppercase;
@@ -60,7 +48,7 @@
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
-	font-size: 7vw;
+	font-size: 5vw;
 	@include animation-delay(0.3s);
 
 	@media screen and (min-width: 700px) {
@@ -99,6 +87,7 @@
 	margin-bottom: 2rem;
 	color: $primary-color;
 	letter-spacing: 1px;
+	font-family: "PoetsenOne";
 }
 
 // Why Us
@@ -226,41 +215,6 @@
 		bottom: 5%;
 		right: 5%;
 		color: whitesmoke;
-	}
-}
-
-// Products Description
-.products-content {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	max-width: 1200px;
-	margin: 0 auto;
-
-	@media screen and (min-width: 900px) {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-}
-
-.products-description {
-	text-align: left;
-	padding: 1rem !important;
-	max-width: 500px;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-
-	p {
-		text-align: justify;
-		font-size: 1rem;
-		color: $dark-color;
-		line-height: 1.6;
-	}
-	@media screen and (min-width: 900px) {
-		padding: 2rem;
-		max-width: 400px;
-		order: 1;
 	}
 }
 

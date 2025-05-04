@@ -15,7 +15,6 @@
 	display: flex;
 	gap: 10px;
 	align-items: center;
-
 	&:hover {
 		.nav-title {
 			color: whitesmoke;
@@ -27,6 +26,7 @@
 	width: 100%;
 	max-width: 40px;
 	border-radius: 100vh;
+
 	@media screen and (min-width: 700px) {
 		max-width: 50px;
 	}
