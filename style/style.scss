@@ -20,7 +20,8 @@
 // Header
 .header {
 	background: linear-gradient($primary-color, darken($primary-color, 12));
-	height: 90vh;
+	// height: 90vh;
+	height: 100dvh;
 }
 .header-content {
 	height: 100%;
@@ -243,7 +244,7 @@
 	margin-top: 5rem;
 }
 
-.jeweler-photo {
+.about-photo {
 	width: 100%;
 	border: 8px solid whitesmoke;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

@@ -49,3 +49,43 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => {
 	observer.observe(section);
 });
+
+// Request Form
+document
+	.getElementById("surveyForm")
+	.addEventListener("submit", function (event) {
+		event.preventDefault();
+
+		const jewelryType = document.getElementById("jewelry_type").value;
+		const budget = document.getElementById("budget").value;
+		const purchasePlace = document.getElementById("purchase_place").value;
+
+		const factors = Array.from(
+			document.querySelectorAll('input[name="factors"]:checked')
+		).map((input) => input.value);
+		if (factors.length === 0) {
+			alert("Please select at least one factor.");
+			return;
+		}
+
+		const message = `
+Encuesta sobre joyería de plata:
+
+¿Qué tipo de joyería de plata prefieres (anillos, collares, pulseras, etc.)?
+${jewelryType}
+
+¿Cuánto estarías dispuesto/a a pagar por una pieza de plata? (Entre 1 y 14 USD)
+${budget}
+
+¿Qué factores influyen más en tu decisión de compra? (Selecciona todos los que apliquen)
+${factors.join(", ")}
+
+¿Dónde sueles comprar joyería de plata?
+${purchasePlace}
+	`.trim();
+
+		const encodedMessage = encodeURIComponent(message);
+		const whatsappUrl = `https://wa.me/+5352383992?text=${encodedMessage}`;
+
+		window.location.href = whatsappUrl;
+	});

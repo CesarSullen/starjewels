@@ -91,51 +91,109 @@
 				<div class="custom-product-container two-columns">
 					<div class="custom-product-form">
 						<div class="card-content card">
-							<h3>Encuentra la joya perfecta</h3>
+							<h3>Encuesta sobre joyería de plata</h3>
 							<p>
-								¿Buscas algo único que no está en nuestro catálogo? Describe la
-								joya que deseas.
+								Queremos conocer tus preferencias. Responde las siguientes
+								preguntas.
 							</p>
-							<form
-								action="https://wa.me/+5352383992"
-								method="get"
-								class="custom-form"
-							>
-								<label for="name">Nombre</label>
-								<input
-									type="text"
-									id="name"
-									name="name"
-									placeholder="Tu nombre"
-									required
-								/>
-								<label for="description">Descripción de la joya</label>
+							<form id="surveyForm" class="custom-form">
+								<label for="jewelry_type"
+									>¿Qué tipo de joyería de plata prefieres (anillos, collares,
+									pulseras, etc.)?</label
+								>
 								<textarea
-									id="description"
-									name="text"
-									placeholder="Describe la joya que buscas (tipo, materiales, colores, estilo, etc.)"
+									id="jewelry_type"
+									name="jewelry_type"
+									placeholder="Ej. Anillos, pulseras"
 									rows="2"
 									required
 								></textarea>
-								<label for="budget">Presupuesto estimado (USD)</label>
+
+								<label for="budget"
+									>¿Cuánto estarías dispuesto/a a pagar por una pieza de plata?
+									(Entre 1 y 14 USD)</label
+								>
 								<input
 									type="number"
+									class="budget-input"
 									id="budget"
 									name="budget"
-									placeholder="Ej. 50"
-									min="10"
+									placeholder="Ej. 10"
+									min="1"
+									max="14"
 									step="1"
 									required
 								/>
-								<button type="submit" class="btn">Enviar solicitud</button>
+
+								<label
+									>¿Qué factores influyen más en tu decisión de compra?
+									(Selecciona todos los que apliquen)</label
+								>
+								<div class="checkbox-group" id="factors" required>
+									<label
+										><input
+											type="checkbox"
+											class="factor-checkbox"
+											name="factors"
+											value="Precio"
+										/>
+										Precio</label
+									>
+									<label
+										><input
+											type="checkbox"
+											class="factor-checkbox"
+											name="factors"
+											value="Diseño"
+										/>
+										Diseño</label
+									>
+									<label
+										><input
+											type="checkbox"
+											class="factor-checkbox"
+											name="factors"
+											value="Marca"
+										/>
+										Marca</label
+									>
+									<label
+										><input
+											type="checkbox"
+											class="factor-checkbox"
+											name="factors"
+											value="Garantía"
+										/>
+										Garantía</label
+									>
+								</div>
+
+								<label for="purchase_place"
+									>¿Dónde sueles comprar joyería de plata?</label
+								>
+								<select
+									class="purchase-place-select"
+									id="purchase_place"
+									name="purchase_place"
+									required
+								>
+									<option value="" disabled selected>
+										Selecciona una opción
+									</option>
+									<option value="Tiendas físicas">Tiendas físicas</option>
+									<option value="Tiendas virtuales">Tiendas virtuales</option>
+								</select>
+
+								<button type="submit" class="btn">Enviar respuestas</button>
 							</form>
 						</div>
 					</div>
+
 					<div class="custom-product-gallery">
 						<div class="custom-product-list">
 							<div class="custom-product-card card">
 								<img
-									src="../assets/jewels/1.png"
+									src="../assets/jewels/placeholders/1.png"
 									alt="Anillo exclusivo"
 									class="custom-product-image"
 								/>
@@ -146,7 +204,7 @@
 							</div>
 							<div class="custom-product-card card">
 								<img
-									src="../assets/jewels/2.png"
+									src="../assets/jewels/placeholders/2.png"
 									alt="Collar único"
 									class="custom-product-image"
 								/>
@@ -157,7 +215,7 @@
 							</div>
 							<div class="custom-product-card card">
 								<img
-									src="../assets/jewels/3.png"
+									src="../assets/jewels/placeholders/3.png"
 									alt="Pulsera especial"
 									class="custom-product-image"
 								/>
