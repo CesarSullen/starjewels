@@ -83,15 +83,18 @@
 			background: rgba(245, 245, 245, 0.8);
 			-moz-appearance: textfield;
 			appearance: textfield;
+
 			&::-webkit-inner-spin-button,
 			&::-webkit-outer-spin-button {
 				-webkit-appearance: none;
 				margin: 0;
 			}
+
 			&:focus {
 				border-color: $primary-color;
 				box-shadow: 0 0 5px rgba($primary-color, 0.3);
 			}
+
 			@media (min-width: 768px) {
 				padding: 0.75rem;
 				font-size: 1rem;
@@ -110,10 +113,12 @@
 			background-repeat: no-repeat;
 			background-position: right 0.75rem center;
 			background-size: 12px;
+
 			&:focus {
 				border-color: $primary-color;
 				box-shadow: 0 0 5px rgba($primary-color, 0.3);
 			}
+
 			@media (min-width: 768px) {
 				padding: 0.75rem;
 				font-size: 1rem;
@@ -125,6 +130,7 @@
 			flex-direction: column;
 			gap: 0.5rem;
 			margin-bottom: 0.75rem;
+
 			label {
 				display: flex;
 				align-items: center;
@@ -133,10 +139,12 @@
 				font-size: 0.9rem;
 				font-weight: 400;
 				cursor: pointer;
+
 				@media (min-width: 768px) {
 					font-size: 1rem;
 				}
 			}
+
 			.factor-checkbox {
 				width: 1rem;
 				height: 1rem;
@@ -172,6 +180,7 @@
 
 	@media (min-width: 768px) {
 		gap: 1.5rem;
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
@@ -179,11 +188,12 @@
 	display: flex;
 	flex-direction: column;
 	border-radius: $border-radius-rounded;
-	box-shadow: 0 4px 15px rgba($primary-color, 0.2);
+	box-shadow: 0 4px 15px rgba($primary-color, 0.3);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 	&:hover {
 		transform: translateY(-5px);
-		box-shadow: 0 6px 20px rgba($primary-color, 0.3);
+		box-shadow: 0 6px 20px rgba($primary-color, 0.4);
 	}
 }
 
@@ -192,30 +202,31 @@
 	aspect-ratio: 5/3;
 	object-fit: cover;
 	object-position: center;
+	max-height: 300px;
 }
 
 .custom-product-info {
-	padding: 0.5rem;
+	padding: 1rem;
 	background: rgba(255, 255, 255, 0.9);
 	text-align: center;
 
 	h4 {
-		font-size: 0.9rem;
+		font-size: 1rem;
 		color: $primary-color;
 		text-transform: uppercase;
 		margin-bottom: 0.25rem;
 
 		@media (min-width: 768px) {
-			font-size: 1rem;
+			font-size: 1.1rem;
 		}
 	}
 
 	p {
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 		color: $font-color;
 
 		@media (min-width: 768px) {
-			font-size: 0.9rem;
+			font-size: 1rem;
 		}
 	}
 }

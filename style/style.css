@@ -549,6 +549,7 @@ section {
 @media (min-width: 768px) {
   .custom-product-list {
     gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -556,11 +557,12 @@ section {
   display: flex;
   flex-direction: column;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(16, 31, 77, 0.2);
+  box-shadow: 0 4px 15px rgba(16, 31, 77, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .custom-product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(16, 31, 77, 0.3);
+  box-shadow: 0 6px 20px rgba(16, 31, 77, 0.4);
 }
 
 .custom-product-image {
@@ -568,31 +570,32 @@ section {
   aspect-ratio: 5/3;
   object-fit: cover;
   object-position: center;
+  max-height: 300px;
 }
 
 .custom-product-info {
-  padding: 0.5rem;
+  padding: 1rem;
   background: rgba(255, 255, 255, 0.9);
   text-align: center;
 }
 .custom-product-info h4 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #101f4d;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
 @media (min-width: 768px) {
   .custom-product-info h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 .custom-product-info p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #343540;
 }
 @media (min-width: 768px) {
   .custom-product-info p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
