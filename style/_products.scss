@@ -61,12 +61,16 @@
 	border-radius: 8px;
 	padding: 0.5rem 0.75rem;
 	text-align: left;
+	max-width: 60%;
 }
 
 .product-name {
 	font-size: 0.9rem;
-	text-wrap: nowrap;
 	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
 }
 
 .product-price {

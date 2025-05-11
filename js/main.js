@@ -56,15 +56,15 @@ document
 	.addEventListener("submit", function (event) {
 		event.preventDefault();
 
-		const jewelryType = document.getElementById("jewelry_type").value;
+		const jewelryType = document.getElementById("jewelryType").value;
 		const budget = document.getElementById("budget").value;
-		const purchasePlace = document.getElementById("purchase_place").value;
+		const purchasePlace = document.getElementById("purchasePlace").value;
 
 		const factors = Array.from(
 			document.querySelectorAll('input[name="factors"]:checked')
 		).map((input) => input.value);
 		if (factors.length === 0) {
-			alert("Please select at least one factor.");
+			alert("Por favor, seleccione al menos un factor.");
 			return;
 		}
 
