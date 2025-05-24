@@ -19,6 +19,28 @@
 	text-decoration: none;
 	border: solid 1px $primary-color;
 
+	&.has-discount {
+		position: relative;
+		padding-top: 1.2rem;
+
+		&::before {
+			content: "rebaja";
+			position: absolute;
+			top: 2rem;
+			right: -6rem;
+			background: red;
+			color: whitesmoke;
+			padding: 0.2rem 0.5rem;
+			width: 100%;
+			font-size: 1.5rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			border-radius: $border-radius-general;
+			transform: rotate(45deg);
+		}
+	}
+
 	&:hover {
 		transform: scale(1.02);
 		background-size: 130% 130%;
@@ -61,7 +83,33 @@
 	border-radius: 8px;
 	padding: 0.5rem 0.75rem;
 	text-align: left;
-	max-width: 60%;
+}
+
+.price-container {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.product-price {
+	font-size: 0.9rem;
+	color: $font-color;
+	font-weight: 500;
+
+	&.original-price {
+		color: $font-color;
+		text-decoration: line-through;
+		font-size: 0.8rem;
+		opacity: 0.7;
+		margin-right: 0.5rem;
+		display: inline-block;
+	}
+
+	&.discount-price {
+		color: #0e9d23;
+		font-weight: 600;
+		font-size: 1rem;
+	}
 }
 
 .product-name {
@@ -77,24 +125,6 @@
 	font-size: 0.9rem;
 	color: $font-color;
 	font-weight: 500;
-}
-
-.product-btn {
-	background: $primary-color;
-	color: white;
-	border-radius: $border-radius-rounded;
-	padding: 0.5rem 1rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 0.9rem;
-	font-weight: 500;
-	cursor: pointer;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.product-btn:hover {
-	opacity: 0.8;
 }
 
 // Styles for product detail page
@@ -119,6 +149,33 @@
 	overflow: hidden;
 	border-radius: $border-radius-general;
 	box-shadow: 0 4px 20px rgba($primary-color, 0.3);
+
+	&.has-discount {
+		position: relative;
+		padding-top: 1.2rem;
+
+		&::before {
+			content: "rebaja";
+			position: absolute;
+			top: 2rem;
+			right: -7rem;
+			background: red;
+			color: whitesmoke;
+			padding: 0.2rem 0.5rem;
+			width: 100%;
+			font-size: 1.5rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			border-radius: $border-radius-general;
+			transform: rotate(45deg);
+			z-index: 1;
+
+			@media screen and (min-width: 768px) {
+				right: -12rem;
+			}
+		}
+	}
 }
 
 .product-detail-image {
@@ -167,6 +224,21 @@
 	color: $primary-color;
 	font-size: 1.8rem;
 	font-weight: 600;
+
+	.original-price {
+		color: $font-color;
+		text-decoration: line-through;
+		font-size: 1.2rem;
+		opacity: 0.7;
+		margin-right: 0.5rem;
+		display: inline-block;
+	}
+
+	.discount-price {
+		color: #0e9d23;
+		font-weight: 600;
+		font-size: 1.8rem;
+	}
 }
 
 .product-detail-texts {

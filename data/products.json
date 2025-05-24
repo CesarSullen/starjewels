@@ -4,6 +4,7 @@
 		"name": "Anillo Constelación",
 		"image": "../assets/jewels/points_1.JPG",
 		"price": 12.0,
+		"discountPrice": 8.0,
 		"alt": "Anillo Constelación",
 		"images": [
 			{
@@ -20,6 +21,7 @@
 		"name": "Anillo de Lágrimas",
 		"image": "../assets/jewels/drops_1.JPG",
 		"price": 12.5,
+		"discountPrice": 8.0,
 		"alt": "Anillo de Lágrimas",
 		"images": [
 			{
@@ -36,6 +38,7 @@
 		"name": "Anillo Infinito",
 		"image": "../assets/jewels/infinite_1.JPG",
 		"price": 11.9,
+		"discountPrice": 8.0,
 		"alt": "Anillo Infinito",
 		"images": [
 			{
@@ -52,6 +55,7 @@
 		"name": "Anillo D’Mami",
 		"image": "../assets/jewels/mom_1.JPG",
 		"price": 12.5,
+		"discountPrice": 8.0,
 		"alt": "Anillo D’Mami",
 		"images": [
 			{
@@ -72,6 +76,7 @@
 		"name": "Anillo Lovely Rose",
 		"image": "../assets/jewels/pink-heart_1.JPG",
 		"price": 12.4,
+		"discountPrice": 8.0,
 		"alt": "Anillo Lovely Rose",
 		"images": [
 			{
@@ -88,6 +93,7 @@
 		"name": "Anillo de Ramas Plateadas",
 		"image": "../assets/jewels/plant_1.JPG",
 		"price": 12.2,
+		"discountPrice": 8.0,
 		"alt": "Anillo de Ramas Plateadas",
 		"images": [
 			{
@@ -104,6 +110,7 @@
 		"name": "Anillo Reina Blanca",
 		"image": "../assets/jewels/silver-heart_1.JPG",
 		"price": 12.8,
+		"discountPrice": 8.0,
 		"alt": "Anillo Reina Blanca",
 		"images": [
 			{
@@ -120,6 +127,7 @@
 		"name": "Anillo Cuadrilátero",
 		"image": "../assets/jewels/square_1.JPG",
 		"price": 12.0,
+		"discountPrice": 8.0,
 		"alt": "Anillo Cuadrilátero",
 		"images": [
 			{

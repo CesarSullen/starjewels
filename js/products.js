@@ -1,36 +1,52 @@
+// products.js (modificado)
 document.addEventListener("DOMContentLoaded", () => {
-	// Function to load and render the product list on products.html
-	const renderProductList = (products) => {
+	const renderProductList = (products, filterDiscount = false) => {
 		const productContainer = document.getElementById("product-list-container");
 		if (!productContainer) return;
 
-		productContainer.innerHTML = products
+		const filteredProducts = filterDiscount
+			? products.filter((product) => product.discountPrice)
+			: products;
+
+		productContainer.innerHTML = filteredProducts
 			.map(
 				(product) => `
-		  <a href="./product-detail.html?id=${
-				product.id
-			}" class="product-card card" style="background-image: url('${
-					product.image
-				}')">
-			<div class="preview-images-container">
-			  ${product.images
-					.slice(0, 2)
-					.map(
-						(img) => `
-				  <img src="${img.src}" alt="${img.alt}" class="preview-image">
-				`
-					)
-					.join("")}
-			</div>
-			<div class="product-footer">
-			  <div class="product-footer-info">
-				<h3 class="product-name">${product.name}</h3>
-				<p class="product-price">$${product.price.toFixed(2)}</p>
-			  </div>
-			  <button class="product-btn">Detalles</button>
-			</div>
-		  </a>
-		`
+            <a href="./product-detail.html?id=${
+							product.id
+						}" class="product-card card${
+					product.discountPrice ? " has-discount" : ""
+				}" style="background-image: url('${product.image}')">
+              <div class="preview-images-container">
+                ${product.images
+									.slice(0, 2)
+									.map(
+										(img) => `
+                  <img src="${img.src}" alt="${img.alt}" class="preview-image">
+                `
+									)
+									.join("")}
+              </div>
+              <div class="product-footer">
+                <div class="product-footer-info">
+                  <h3 class="product-name">${product.name}</h3>
+                  <div class="price-container">
+                    <p class="product-price${
+											product.discountPrice ? " original-price" : ""
+										}">
+                      $${product.price.toFixed(2)}
+                    </p>
+                    ${
+											product.discountPrice
+												? `<p class="product-price discount-price">$${product.discountPrice.toFixed(
+														2
+												  )}</p>`
+												: ""
+										}
+                  </div>
+                </div>
+              </div>
+            </a>
+          `
 			)
 			.join("");
 	};
@@ -56,35 +72,48 @@ document.addEventListener("DOMContentLoaded", () => {
 		sectionTitle.textContent = product.name;
 
 		productContainer.innerHTML = `
-		<div class="product-detail-carousel">
-		  ${product.images
-				.map(
-					(img, index) => `
-			  <img src="${img.src}" alt="${img.alt}" class="product-detail-image ${
-						index === 0 ? "active" : ""
+          <div class="product-detail-carousel${
+						product.discountPrice ? " has-discount" : ""
 					}">
-			`
-				)
-				.join("")}
-		  <button class="carousel-btn prev">❮</button>
-		  <button class="carousel-btn next">❯</button>
-		</div>
-		<div class="product-detail-info">
-		  <p class="product-detail-price">$${product.price.toFixed(2)}</p>
-		  <div class="product-detail-texts">
-			${product.details
-				.map((detail) => `<p class="product-detail-text">${detail}</p>`)
-				.join("")}
-		  </div>
-		  <a href="../docs/how-to.pdf">
-			<button class="link">¿Cómo cuidar tus joyas?</button>
-		  </a>
-		  <a href="../docs/warranty.html">
-					<button class="link">garantía</button>
-		  </a>
-		  <button class="btn">Comprar</button>
-		</div>
-	  `;
+            ${product.images
+							.map(
+								(img, index) => `
+              <img src="${img.src}" alt="${
+									img.alt
+								}" class="product-detail-image ${index === 0 ? "active" : ""}">
+            `
+							)
+							.join("")}
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
+          </div>
+          <div class="product-detail-info">
+            <p class="product-detail-price">
+              ${
+								product.discountPrice
+									? `<span class="original-price">$${product.price.toFixed(
+											2
+									  )}</span>
+                         <span class="discount-price">$${product.discountPrice.toFixed(
+														2
+													)}</span>`
+									: `$${product.price.toFixed(2)}`
+							}
+            </p>
+            <div class="product-detail-texts">
+              ${product.details
+								.map((detail) => `<p class="product-detail-text">${detail}</p>`)
+								.join("")}
+            </div>
+            <a href="../docs/how-to.pdf">
+              <button class="link">¿Cómo cuidar tus joyas?</button>
+            </a>
+            <a href="../docs/warranty.html">
+              <button class="link">garantía</button>
+            </a>
+            <button class="btn">Comprar</button>
+          </div>
+        `;
 
 		// Add carousel functionality
 		const images = productContainer.querySelectorAll(".product-detail-image");
@@ -119,7 +148,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		})
 		.then((products) => {
 			if (document.getElementById("product-list-container")) {
-				renderProductList(products);
+				// Check if current page is limited-offers.html
+				if (window.location.pathname.includes("limited-offers.html")) {
+					renderProductList(products, true);
+				} else {
+					renderProductList(products);
+				}
 			} else if (document.querySelector(".product-detail-container")) {
 				renderProductDetail(products);
 			}

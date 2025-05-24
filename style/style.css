@@ -620,6 +620,26 @@ section {
   text-decoration: none;
   border: solid 1px #101f4d;
 }
+.product-card.has-discount {
+  position: relative;
+  padding-top: 1.2rem;
+}
+.product-card.has-discount::before {
+  content: "rebaja";
+  position: absolute;
+  top: 2rem;
+  right: -6rem;
+  background: red;
+  color: whitesmoke;
+  padding: 0.2rem 0.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
 .product-card:hover {
   transform: scale(1.02);
   background-size: 130% 130%;
@@ -661,7 +681,31 @@ section {
   border-radius: 8px;
   padding: 0.5rem 0.75rem;
   text-align: left;
-  max-width: 60%;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product-price {
+  font-size: 0.9rem;
+  color: #343540;
+  font-weight: 500;
+}
+.product-price.original-price {
+  color: #343540;
+  text-decoration: line-through;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+.product-price.discount-price {
+  color: #0e9d23;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .product-name {
@@ -677,24 +721,6 @@ section {
   font-size: 0.9rem;
   color: #343540;
   font-weight: 500;
-}
-
-.product-btn {
-  background: #101f4d;
-  color: white;
-  border-radius: 12px;
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.product-btn:hover {
-  opacity: 0.8;
 }
 
 .product-detail-page {
@@ -719,6 +745,32 @@ section {
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 4px 20px rgba(16, 31, 77, 0.3);
+}
+.product-detail-carousel.has-discount {
+  position: relative;
+  padding-top: 1.2rem;
+}
+.product-detail-carousel.has-discount::before {
+  content: "rebaja";
+  position: absolute;
+  top: 2rem;
+  right: -7rem;
+  background: red;
+  color: whitesmoke;
+  padding: 0.2rem 0.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .product-detail-carousel.has-discount::before {
+    right: -12rem;
+  }
 }
 
 .product-detail-image {
@@ -764,6 +816,19 @@ section {
   color: #101f4d;
   font-size: 1.8rem;
   font-weight: 600;
+}
+.product-detail-price .original-price {
+  color: #343540;
+  text-decoration: line-through;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+.product-detail-price .discount-price {
+  color: #0e9d23;
+  font-weight: 600;
+  font-size: 1.8rem;
 }
 
 .product-detail-texts {
